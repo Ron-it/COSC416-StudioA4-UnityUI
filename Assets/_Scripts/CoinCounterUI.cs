@@ -16,12 +16,11 @@ public class CoinCounterUI : MonoBehaviour
 
     private void Start()
     {
+        Canvas.ForceUpdateCanvases();
         current.SetText("0");
         toUpdate.SetText("0");
         containerInitPositon = coinTextContainer.localPosition.y;
         moveAmount = current.rectTransform.rect.height;
-        Debug.Log(moveAmount);
-        Debug.Log(containerInitPositon);
     }
 
     public void UpdateScore(int score)
@@ -29,7 +28,7 @@ public class CoinCounterUI : MonoBehaviour
         // set the score to the masked text UI
         toUpdate.SetText($"{score}");
         // trigger the local move animation
-        coinTextContainer.DOLocalMoveY(173, duration); // hardcoded value
+        coinTextContainer.DOLocalMoveY(containerInitPositon + moveAmount, duration);
     }
 
 }
