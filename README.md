@@ -3,7 +3,7 @@
 A simple third person character controller in Unity with a basic user interface
 
 ## Demo
-
+https://github.com/user-attachments/assets/709834eb-cd12-44db-91a7-5935427729fd
 
 ## Features
 
